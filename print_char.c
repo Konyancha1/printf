@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_char - writes the character c to stdour
  * @s: The character to print

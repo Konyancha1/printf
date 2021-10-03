@@ -1,5 +1,6 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdarg.h>
 /**
  * function - function that finds formats for _printf
  * calls the corresponding fi=unction

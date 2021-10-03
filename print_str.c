@@ -1,7 +1,10 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_string - writes the character c to stdout
  * @ap: string to print
+ *
  * Return: 1
  */
 int print_string(va_list ap)
