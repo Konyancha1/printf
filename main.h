@@ -10,6 +10,7 @@ int _putchar(char c);
 int print_string(va_list ap);
 int print_char(va_list s);
 int print_percentage(void);
+int (*function(const char *format))(va_list);
 /**
  * struct code_format - Struct format
  *
