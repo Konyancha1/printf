@@ -14,9 +14,9 @@ char *buffer;
 
 va_start(arguments, format);
 buffer = malloc(sizeof(char) * 1024);
-while (format && forma[i])
+while (format && format[i])
 {
-if (formaat[i] == '%')
+if (format[i] == '%')
 {
 if (format[i + 1] == '%')
 handl_buf(buffer, format[i], ibuf), len++;

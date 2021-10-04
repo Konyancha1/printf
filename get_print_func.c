@@ -15,9 +15,9 @@ print_t pr[] = {
 };
 int i = 0;
 
-while (pr[i].type_arg)
+while (pr[i].sc)
 {
-if (s[index] == pr[i].type_arg[0])
+if (s[index] == pr[i].sc[0])
 break;
 i++;
 }

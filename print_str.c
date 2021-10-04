@@ -6,7 +6,7 @@
  * @ibuf: index for buffer pointer
  * Return: On success 1.
  */
-int print_str(va_list argumernts, char *buf, unsigned int ibuf)
+int print_str(va_list arguments, char *buf, unsigned int ibuf)
 {
 char *str;
 unsigned int i = 0;
