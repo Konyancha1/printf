@@ -5,7 +5,7 @@
  * @index: index of argument identifier.
  * Return: amount of identifiers.
  */
-int function(const char *s, int index)
+int ev_print_func(const char *s, int index)
 {
 print_t pr[] = {
 		{"c", print_chr},{"s", print_str},{"%", print_prg},
