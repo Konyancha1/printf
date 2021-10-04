@@ -13,6 +13,7 @@ print_t pr[] = {
 {"%", print_prg},
 {"i", print_int},
 {"d", print_int},
+{"b", print_bnr},
 {NULL, NULL},
 };
 int i = 0;
