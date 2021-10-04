@@ -34,7 +34,7 @@ if (!format[i + 1])
 return (-1);
 _putchar(format[i]);
 cprint++;
-if (fprmat[i + 1] == '%')
+if (format[i + 1] == '%')
 i += 2;
 else
 i++;
