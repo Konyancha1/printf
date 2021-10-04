@@ -11,6 +11,8 @@ print_t pr[] = {
 {"c", print_chr},
 {"s", print_str},
 {"%", print_prg},
+{"i", print_int},
+{"d", print_int},
 {NULL, NULL},
 };
 int i = 0;
