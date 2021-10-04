@@ -18,6 +18,7 @@ print_t pr[] = {
 {"o", print_oct},
 {"x", print_hex},
 {"X", print_upx},
+{"S", print_usr},
 {NULL, NULL},
 };
 int i = 0;
