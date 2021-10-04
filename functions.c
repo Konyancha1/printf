@@ -1,24 +1,33 @@
 #include "main.h"
 /**
- * function - function that finds formats for _printf
- * calls the corresponding fi=unction
- * @format: format(char, string, int, decimal)
- * Return: NULL or function associated ;
+ * function - returns the amount of identifiers
+ * @s: argument identifier
+ * @index: index of argument identifier.
+ * Return: amount of identifiers.
  */
-int (*function(const char *format))(va_list)
+int function(const char *s, int index)
 {
-  unsigned int i = 0;
-  code_f find_f[] = {
-		     {"c", print_char},
-		     {"s", print_string},
-		     {"%", print_percentage}
-		     {NULL, NULL}
-  };
-  while (find_f[i].sc)
-    {
-      if (find_f[i].sc[0] == (*format))
-	return (find_f[i].f);
-      i++;
-    }
-  return (NULL);
+print_t pr[] = {
+		{"c", print_chr},{"s", print_str},{"%", print_prg},
+		{NULL, NULL},
+};
+int i = 0, j = 0, first_index;
+first_index = index;
+while (pr[i].type_arg)
+{
+if (s[index] == pr[i].type.arg[j])
+{
+if (pr[i].type_arg[j + 1] != '\0')
+index++, j++;
+else
+break;
+}
+else
+{
+j = 0;
+i++;
+index = first_index;
+}
+}
+return (j);
 }

@@ -1,25 +1,17 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_char - writes the character c to stdour
- * @s: The character to print
- * 
- * Return: 1
+ * print_chr - writes the character c to stdour
+ * @arguments: input char
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: On succes 1.
  */
-int print_char(va_list s)
+int print_chr(va_list arguments, char *buf, unsigned int ibuf)
 {
-unsigned char a;
+char c;
 
- a = va_arg(s, int);
- _putchar(a);
- return(1);
-}
-/**
- * print_percentage - %
- * 
- * Return: 1
- */
-int print_percentage(void)
-{
-_putchar('%');
+c = va_arg(arguments, int);
+handl_buf(buf, c, ibuf);
 return (1);
 }

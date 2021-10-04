@@ -5,22 +5,27 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int _printf(const char *format, ...);
-int _putchar(char c);
-int print_string(va_list ap);
-int print_char(va_list s);
-int print_percentage(void);
-int (*function(const char *format))(va_list);
 /**
- * struct code_format - Struct format
+ * struct print - struct for printer functions
+ * @sc: Identifier
+ * @f: pointer to a printer function
  *
- * @sc: The specifiers
- * @f: The function associated
+ * Description: struct that stores pointers to a
+ * printer function.
  */
-typedef struct code_format
+typedef struct print
 {
   char *sc;
-  int (*f)(va_list);
-} code_f;
+  int (*f)(va_list, char *, unsigned int);
+} print_f;
+
+int _printf(const char *format, ...);
+int print_prg(va_list __attribute__((unused)), char *, unsigned int);
+int print_chr(va_list arguments, char *buf, unsigned int ibuf);
+int print_str(va_list arguments, char *buf, unsigned int ibuf);
+int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int);
+int function(const char *s, int index);
+unsigned int handl_buf(char *buf, char c, unsigned int ibuf);
+int print_buf(char *buf, unsigned int nbuf);
 
 #endif

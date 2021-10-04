@@ -1,22 +1,25 @@
 #include "main.h"
 /**
- * print_string - writes the character c to stdout
- * @ap: string to print
- *
- * Return: 1
+ * print_str - writes the string to stdout
+ * @arguments: input string
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: On success 1.
  */
-int print_string(va_list ap)
+int print_str(va_list argumernts, char *buf, unsigned int ibuf)
 {
 char *str;
-int i = 0;
+unsigned int i = 0;
+char nill[] = "(null)";
 
-str = va_arg(ap, char *);
+str = va_arg(arguments, char *);
 if (str == NULL)
-str = "(null)";
-while (str[i])
 {
-_putchar(str[i]);
-i++;
+for (i = 0; nill[i]; i++)
+ibuf = handl_buf(buf, nill[i], ibuf);
+return (6);
 }
-return (i);
+for (i = 0; str[i]; i++)
+ibuf = handl_buf(buf, str[i], ibuf);
+return(i);
 }
