@@ -20,6 +20,7 @@ print_t pr[] = {
 {"X", print_upx},
 {"S", print_usr},
 {"p", print_add},
+{"r", print_rev},
 {NULL, NULL},
 };
 int i = 0;
