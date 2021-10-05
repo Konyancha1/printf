@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * get_print_func - selects the correct function to perform the operation.
+ * ev_print_func - returns the amount of identifiers.
  * @s: argument indentifier
- * @index: index for argument indentifier
- * Return: pointer to a function.
+ * @index: index of argument identifier.
+ * Return: amount of identifiers.
  */
-int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
+int ev_print_func(const char *s, int index)
 {
 print_t pr[] = {
 {"c", print_chr}, {"s", print_str},
@@ -22,9 +22,9 @@ print_t pr[] = {
 {"hX", prinhupx}, {"R", print_rot},
 {"r", print_rev}, {NULL, NULL},
 };
- 
+  
 int i = 0, j = 0, first_index;
- 
+
 first_index = index;
 while (pr[i].sc)
 {
@@ -42,5 +42,5 @@ i++;
 index = first_index;
 }
 }
-return (pr[i].f);
+return (j);
 }
