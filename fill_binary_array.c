@@ -33,4 +33,5 @@ else
 binary[i] = '0';
 }
 return (binary);
+
 }
