@@ -22,11 +22,13 @@ for (i = 0; format && format[i]; i++)
 if (format[i] == '%')
 {
 if (format[i + 1] == '\0')
-{    print_buf(buffer, ibuf), free(buffer), va_end(arguments);
+{
+print_buf(buffer, ibuf), free(buffer), va_end(arguments);
 return (-1);
 }
 else
-{    function = get_print_func(format, i + 1);
+{
+function = get_print_func(format, i + 1);
 if (function == NULL)
 {
 if (format[i + 1] == ' ' && !format[i + 2])
