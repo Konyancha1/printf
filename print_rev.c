@@ -8,7 +8,7 @@
  */
 int print_rev(va_list arguments, char *buf, unsigned int ibuf)
 {
-  char *str;
+char *str;
 unsigned int i;
 int j = 0;
 char nill[] = "(llun)";
